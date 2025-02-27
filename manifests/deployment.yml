@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: pascalapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pascalapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: pascalapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: pascalapipelinesjavascriptdocker 
+          image: seowoncontainerregistry.azurecr.io/pascalapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
